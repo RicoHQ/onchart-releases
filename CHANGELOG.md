@@ -1,9 +1,9 @@
 # ONCHART — Complete reconstructed changelog
 
 Updated 20 October 2026 from the local source archive, packaged documentation,
-release notes, source comparisons and release-rename index. Covers **126 distinct
-saved version labels in 127 entries**: 49 single-file Python snapshots, eight
-modular Python snapshots, one parallel C prototype and 64 native Qt C++ builds.
+release notes, source comparisons and release-rename index. Covers **127 distinct
+saved version labels in 128 entries**: 49 single-file Python snapshots, eight
+modular Python snapshots, one parallel C prototype and 65 native Qt C++ builds.
 The C prototype and modular Python rewrite both use 3.0.0 and are described separately.
 
 This is a reconstruction of preserved evidence. Older Python applications were
@@ -153,6 +153,7 @@ are retained rather than converted into unsupported feature claims.
 | [3.20.1](#native-3-20-1) | Native Qt C++ | Binary search for danrate |
 | [3.21.0](#native-3-21-0) | Native Qt C++ | Live music, mod cards, installer folders and service recovery |
 | [3.21.1](#native-3-21-1) | Native Qt C++ | ONCHART Remote for Android and iPhone |
+| [3.21.2](#native-3-21-2) | Native Qt C++ | Blue default remote theme and app icons |
 | [Site 2026.10.17](#website-2026-10-17) | Website | Premium public website refresh |
 | [Site 2026.10.17.2](#website-2026-10-17-2) | Website | React Bits experience additions |
 | [Site 2026.10.17.3](#website-2026-10-17-3) | Website | Staff cards and continuous backgrounds |
@@ -1852,7 +1853,19 @@ Comparisons follow the saved version labels, across the v1/v2 boundary. Static s
 
 **Validation:** Release desktop build passed. Thirteen native protocol/integration checks passed with no skips, covering pairing/authentication, expiry, revocation, host/origin gates, malformed and bounded requests, duplicate commands, real MainWindow preview controls and speed multipliers, mod exclusions/export, account gating and detached-preview destruction. Twelve client checks passed for address validation, pairing, clock projection, stale responses, background behavior, nonoverlapping polls, backoff and no command replay. Five actual desktop-to-browser touch-layout checks passed at 320/393/430-pixel portrait widths, 844-pixel landscape and iPhone WebKit with reduced motion, including pairing, controls, mods, library search, loop field preservation and disconnect. All visible buttons and help disclosures met the 44-pixel touch target in those layouts. Separate Chromium and WebKit checks passed invalid-code recovery, disconnect recovery and 200-percent text sizing without horizontal overflow on the settings screen. Screenshots were visually reviewed, including the corrected iPhone font weights. The Android release was built, aligned and signature-verified; every embedded mobile asset matches the final web build. The iOS development project was synchronized. Limitations: no physical Android/iPhone or USB-cable connection was tested; hardware virtualization is unavailable on this PC. Native iOS signing/build requires macOS/Xcode and was not performed. The local HTTP transport requires a trusted private IPv4 network and does not encrypt against local network observers; do not expose it to the internet. Preview controls operate ONCHART, not the running rhythm game, and do not add music playback to its silent visual preview. Native simfile difficulty selection stays on the desktop. Existing game-reader compatibility and provider HTTP503 limitations remain; games and paid generation were not rerun, and no lasting osu! crash repair is claimed.
 
-**Evidence:** [RELEASE_3.21.1.md](<RELEASE_3.21.1.md>).
+**Evidence:** [RELEASE_3.21.1.md](<RELEASE_3.21.1.md>); [src](<dist/ONCHART_v3.21.1-source/src>).
+
+<a id="native-3-21-2"></a>
+
+### 3.21.2 — Blue default remote theme and app icons
+
+- Updates ONCHART Remote 1.0.1 to match the desktop’s existing default blue accent (#38bdf8), with navy surfaces, blue gradients, selected mod cards, playback controls, pairing illustrations, toggles and navigation. The desktop’s saved custom theme choices remain available.
+- Replaces the green browser/home-screen, Android adaptive/legacy and iOS app icons with blue versions of the ONCHART remote mark. Updates Android/iOS launch artwork, browser theme metadata and native system-bar/background colors to the same palette.
+- Publishes a signed Android update with the existing app identity and signing key (versionCode 2). Embeds the new remote interface in desktop 3.21.2 and retains pairing, controls, V2/V3 selection, installation folders, signed updates and rollback. Preserves earlier release packages; development sources and signing keys remain private.
+
+**Validation:** Desktop and signed Android release builds passed. The final blue interface passed all five existing Chromium/WebKit touch-layout and interaction checks, including minimum 44-pixel targets. Default computed accent/background colors, browser manifest and icon colors were checked, and screenshots were visually reviewed. Thirteen existing native remote checks and twelve client checks passed. Android signature, versionCode and embedded-asset equality were verified; the native iOS project was synchronized. Limitations: physical Android/iPhone and USB networking remain untested; no native iOS binary was built on Windows. The local remote requires a trusted private network. Game-reader, provider availability and previously documented osu! crash limitations are unchanged; no new gameplay/crash repair is claimed.
+
+**Evidence:** [RELEASE_3.21.2.md](<RELEASE_3.21.2.md>).
 
 ## Website releases
 

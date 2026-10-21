@@ -1,4 +1,8 @@
-# ONCHART Remote 1.0.0
+# ONCHART Remote 1.0.1
+
+The default interface and app icons use ONCHART's blue accent (#38bdf8) with navy backgrounds. Desktop 3.21.2 includes this updated browser interface; the signed Android app is version 1.0.1.
+
+Update the Android app to receive the new icon. For an existing iPhone home-screen shortcut that retains the old icon, remove and re-add the shortcut from Safari after updating ONCHART on the PC.
 
 The phone remote works with **ONCHART V3 Native 3.21.1 or newer**. V2 Classic does not include its desktop server.
 
@@ -45,4 +49,4 @@ The client backs off after connection loss, pauses polling in the background and
 
 The private mobile project is in `mobile-remote`. Use Node 22.12+ (the validated build environment uses Node 24), `npm ci`, `npm run build`, and `npm test`. Its generated `remote.qrc` embeds compiled assets in the desktop application; it is not a development source distribution. Android builds use the workspace-local JDK/SDK and `mobile-remote/Build-Android.ps1`; signing material stays under the excluded `.tools/mobile/signing` directory and is never a public asset.
 
-The native protocol/integration tests are `onchart_remote_tests`; browser end-to-end tests use an isolated desktop fixture and Chromium/WebKit phone-sized viewports. Release-specific results and limitations belong in `RELEASE_3.21.1.md` and the complete generated changelog. Third-party notices ship with the mobile assets and desktop documentation.
+The native protocol/integration tests are `onchart_remote_tests`; browser end-to-end tests use an isolated desktop fixture and Chromium/WebKit phone-sized viewports. Release-specific results and limitations belong in `RELEASE_3.21.2.md` and the complete generated changelog. Third-party notices ship with the mobile assets and desktop documentation.

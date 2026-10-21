@@ -2,10 +2,11 @@
 
 [Download the current V2/V3 launcher](https://github.com/RicoHQ/onchart-releases/releases/latest/download/ONCHART.Setup.exe). V2 Classic 2.7.12 is available from the same installer.
 
-This catalog links all 60 preserved native versions plus releases 3.20.0 through 3.21.1. Each release has its changes, historical validation and package checksum.
+This catalog links all 60 preserved native versions plus releases 3.20.0 through 3.21.2. Each release has its changes, historical validation and package checksum.
 
 | Version | Changes | Runtime archive |
 |---|---|---|
+| [3.21.2](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.2) | Blue default remote theme and app icons | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.2/ONCHART_v3.21.2-portable.zip) |
 | [3.21.1](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.1) | Android/iPhone remote, paired preview controls and practice loops | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.1/ONCHART_v3.21.1-portable.zip) |
 | [3.21.0](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.0) | Selectable mods, live map readers, music pulses and installation folders | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.0/ONCHART_v3.21.0-portable.zip) |
 | [3.20.1](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.20.1) | Binary search for danrate on the 0.01 rate grid | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.20.1/ONCHART_v3.20.1-portable.zip) |
