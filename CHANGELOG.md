@@ -1,9 +1,9 @@
 # ONCHART — Complete reconstructed changelog
 
 Updated 20 October 2026 from the local source archive, packaged documentation,
-release notes, source comparisons and release-rename index. Covers **125 distinct
-saved version labels in 126 entries**: 49 single-file Python snapshots, eight
-modular Python snapshots, one parallel C prototype and 63 native Qt C++ builds.
+release notes, source comparisons and release-rename index. Covers **126 distinct
+saved version labels in 127 entries**: 49 single-file Python snapshots, eight
+modular Python snapshots, one parallel C prototype and 64 native Qt C++ builds.
 The C prototype and modular Python rewrite both use 3.0.0 and are described separately.
 
 This is a reconstruction of preserved evidence. Older Python applications were
@@ -152,6 +152,7 @@ are retained rather than converted into unsupported feature claims.
 | [3.20.0](#native-3-20-0) | Native Qt C++ | V2/V3 installer, embedded changelog and archived release history |
 | [3.20.1](#native-3-20-1) | Native Qt C++ | Binary search for danrate |
 | [3.21.0](#native-3-21-0) | Native Qt C++ | Live music, mod cards, installer folders and service recovery |
+| [3.21.1](#native-3-21-1) | Native Qt C++ | ONCHART Remote for Android and iPhone |
 | [Site 2026.10.17](#website-2026-10-17) | Website | Premium public website refresh |
 | [Site 2026.10.17.2](#website-2026-10-17-2) | Website | React Bits experience additions |
 | [Site 2026.10.17.3](#website-2026-10-17-3) | Website | Staff cards and continuous backgrounds |
@@ -1837,6 +1838,21 @@ Comparisons follow the saved version labels, across the v1/v2 boundary. Static s
 **Validation:** Release build passed. Sixteen feature checks passed with no skips, including actual selected Interlude/Quaver chart imports and audio decoding, Etterna live state/exact difficulty/audio, a real-audio peak pulse, silence/selection stopping, rapid analysis cancellation/restart, mod exclusions/exports and error redaction. Nine focused assistant checks passed for transient retry, exhaustion, cancellation, authentication failures and tool-completion safeguards; six skin checks passed for normal resume, separate polling/CDN retries, unconfirmed paid-submission protection and unsafe URLs. Fifty-one launcher checks passed, including custom location copy, checksums, both tracks, rollback/preferences, preserved originals and cancellation; the folder UI and uninstaller syntax were inspected. Four existing ambient-setting checks passed. Thirteen deterministic Dan search checks and four real linked DanOverlay modes passed (9–10 evaluations). Resident-memory fixtures passed across the full run and subsequent focused guarded-page recovery checks; the full memory group was not repeated after that fixture correction, and real-game optional memory probes were skipped. Interlude and Quaver live reads showed advancing 0.50x clocks with active music; Etterna exported its actual map/clock/rate, and decoded music drove a pulse while selection stopped it. System-only-PATH portable startup, 26 Qt library hashes and offline Whisper transcription passed. Google’s configured gemini-3.1-flash-lite passed a metadata GET and one minimal chat with HTTP 200; no private application data or tool execution was involved. No new paid Higgsfield generation was submitted. Limitations: external providers can still return 503; their underlying availability cannot be repaired by this client, and the exact older Higgsfield failure body was unavailable. Different game versions may change reader layouts. Quaver-native simfile selection, unsupported SV/timing groups, Etterna stops/warps/mines and native replay/score parity retain the documented limits. The independent osu! baseline exited with System.StackOverflowException before the new reader attached; no lasting crash repair or crash-free gameplay is claimed. Application updates do not replace an older launcher binary: run the new setup for its folder selector.
 
 **Evidence:** [RELEASE_3.21.0.md](<RELEASE_3.21.0.md>); [src](<dist/ONCHART_v3.21.0-source/src>).
+
+<a id="native-3-21-1"></a>
+
+### 3.21.1 — ONCHART Remote for Android and iPhone
+
+- Adds ONCHART Remote 1.0.0: a responsive touch interface with minimum 44-pixel button targets and Control, Library, selectable Mods and More screens, chart details/density, preview play/pause/restart/seeking, chart rate and practice-loop controls. Recent files use opaque identifiers; mod export creates a new difficulty and preserves the source. Full LN, No LN and Inverse remain mutually exclusive.
+- Adds Settings → Phone remote. The local server starts disabled on every desktop launch and requires an active signed-in account. Six-digit pairing codes expire after three minutes; session tokens are hashed in memory, capped at four devices and revoked on sign-out, disable or Disconnect all phones. Requests, sockets, timeouts, pairing attempts and commands are bounded. Host/origin checks protect against cross-origin requests and DNS rebinding; no arbitrary terminal or filesystem endpoint is exposed.
+- Provides a signed Android APK and a Safari home-screen remote for iPhone. Connect over trusted Wi-Fi/LAN, USB tethering/networking or Android developer port forwarding. The interface is embedded in ONCHART and the Android app, with local regular/bold fonts and third-party notices; no development source or source maps are published.
+- Pauses polling in the background, backs off on connection loss, prevents overlapping polls and stale responses, and never automatically replays a failed button press. Sliders send on release, loop edits survive state polling, and idle screens avoid continuous animation. Clock interpolation is bounded and follows the actual preview speed multiplier or game clock; paused clocks stop advancing and recorded replays retain their rate.
+- Fixes a verified detached-preview destruction failure by stopping its clock and destroying its window before referenced dashboard controls. Manual phone preview controls suppress automatic game-following until Follow game is selected; seeking a paused preview keeps it paused. This verified preview teardown repair does not establish a lasting osu! crash repair.
+- Retains V2 Classic 2.7.12 and V3 selection, installation-folder changes, signed updates and rollback in launcher 3.21.1. Preserves all earlier release folders and archives; source and signing material remain private.
+
+**Validation:** Release desktop build passed. Thirteen native protocol/integration checks passed with no skips, covering pairing/authentication, expiry, revocation, host/origin gates, malformed and bounded requests, duplicate commands, real MainWindow preview controls and speed multipliers, mod exclusions/export, account gating and detached-preview destruction. Twelve client checks passed for address validation, pairing, clock projection, stale responses, background behavior, nonoverlapping polls, backoff and no command replay. Five actual desktop-to-browser touch-layout checks passed at 320/393/430-pixel portrait widths, 844-pixel landscape and iPhone WebKit with reduced motion, including pairing, controls, mods, library search, loop field preservation and disconnect. All visible buttons and help disclosures met the 44-pixel touch target in those layouts. Separate Chromium and WebKit checks passed invalid-code recovery, disconnect recovery and 200-percent text sizing without horizontal overflow on the settings screen. Screenshots were visually reviewed, including the corrected iPhone font weights. The Android release was built, aligned and signature-verified; every embedded mobile asset matches the final web build. The iOS development project was synchronized. Limitations: no physical Android/iPhone or USB-cable connection was tested; hardware virtualization is unavailable on this PC. Native iOS signing/build requires macOS/Xcode and was not performed. The local HTTP transport requires a trusted private IPv4 network and does not encrypt against local network observers; do not expose it to the internet. Preview controls operate ONCHART, not the running rhythm game, and do not add music playback to its silent visual preview. Native simfile difficulty selection stays on the desktop. Existing game-reader compatibility and provider HTTP503 limitations remain; games and paid generation were not rerun, and no lasting osu! crash repair is claimed.
+
+**Evidence:** [RELEASE_3.21.1.md](<RELEASE_3.21.1.md>).
 
 ## Website releases
 
