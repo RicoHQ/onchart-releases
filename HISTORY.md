@@ -1,6 +1,6 @@
 # ONCHART C++ release history
 
-[Download the current V2/V3 launcher](https://github.com/RicoHQ/onchart-releases/releases/latest/download/ONCHART.Setup.exe). V2 Classic 2.7.12 is available from the same installer.
+[Download the current V2/V3 launcher](https://github.com/RicoHQ/onchart-releases/releases/download/launcher-v3.22.3/ONCHART.Setup.exe). V2 Classic 2.7.12 is available from the same installer.
 
 This catalog links all 60 preserved native versions plus releases 3.20.0 through 3.21.2. Each release has its changes, historical validation and package checksum.
 
