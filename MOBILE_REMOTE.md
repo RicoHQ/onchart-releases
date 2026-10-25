@@ -1,10 +1,10 @@
-# ONCHART Remote 1.0.1
+# ONCHART Remote 1.1.1
 
-The default interface and app icons use ONCHART's blue accent (#38bdf8) with navy backgrounds. Desktop 3.21.2 includes this updated browser interface; the signed Android app is version 1.0.1.
+The default interface and app icons use ONCHART's blue accent (#38bdf8) with navy backgrounds. Choose another accent in **More → Remote theme**; it saves on that phone. Desktop 3.22.3 includes this interface; the signed Android app is version 1.1.1.
 
 Update the Android app to receive the new icon. For an existing iPhone home-screen shortcut that retains the old icon, remove and re-add the shortcut from Safari after updating ONCHART on the PC.
 
-The phone remote works with **ONCHART V3 Native 3.21.1 or newer**. V2 Classic does not include its desktop server.
+The phone remote works with **ONCHART V3 Native 3.22.0 or newer**. V2 Classic does not include its desktop server.
 
 ## Connect over Wi-Fi or LAN
 
@@ -36,17 +36,21 @@ The same pairing and controls apply to every route. Physical phones, cables, dri
 - Recent single-chart files through opaque identifiers; native simfile difficulty selection remains on the PC.
 - Full LN, No LN, Inverse, No SV and Chordjackify selection. The LN conversion mods remain mutually exclusive. Export creates a new difficulty and preserves the original. Check ONCHART's activity log for the output or failure details.
 - Desktop page navigation and music-pulse, compact-view and low-end settings.
+- The **Tools** tab exposes the desktop's typed terminal command catalog, including chart editing, rate and bulk-rate tools, pack generation, conversions, images, analytics, sessions, overlays, extensions, marathon workflows, preview options and supported named controls. Search an action, review its help/example, then confirm it before sending. Commands run through ONCHART's parser; there is no shell endpoint.
+- AI Assistant text chat, recent assistant messages, desktop activity output and a phone action to start the PC microphone. The assistant uses the configured desktop provider and bundled local speech recognizer. Microphone access remains subject to Windows privacy settings; the phone must explicitly confirm before capture begins. The recorder stops after a pause or its existing 15-second limit.
+- Phone push-to-talk, where the phone/browser exposes microphone capture: tap **Record from phone**, speak for up to 10 seconds, and tap **Finish and review**. Allow microphone permission when requested. A short mono WAV goes only to the paired PC over the local connection and is transcribed by the bundled offline Whisper runtime. ONCHART returns the recognized words to the phone; choose **Use latest recognized words** and **Send message** to continue. Audio does not auto-run a command or go to the configured AI provider. Capture stops on cancel, app backgrounding, disconnect or the ten-second limit. If your browser disables microphone capture at its local HTTP address, use the separate **PC microphone** action; a signed native iOS app is not currently released.
+- Landscape layout uses a wider two-column control view and exposes the tool catalog beside the session controls.
 
 ## Pairing and connection behavior
 
 The remote is off at every desktop start. Pairing codes expire after three minutes. Up to four phones can pair; **Disconnect all phones**, turning the remote off or signing out revokes them. Session tokens are kept hashed in desktop memory, and the phone retains its token only for its current app/browser session. Idle sessions expire after twelve hours.
 
-Use a trusted local network. The connection is local HTTP, so it does not encrypt traffic against other devices monitoring that network. Do not expose or port-forward the remote to the internet. The server limits private IPv4 peers, validates host/origin headers, requires pairing for state and commands, and exposes no arbitrary terminal or filesystem endpoint.
+Use a trusted local network. The connection is local HTTP, so it does not encrypt traffic against other devices monitoring that network. Do not expose or port-forward the remote to the internet. The server limits private IPv4 peers, validates host/origin headers, and requires pairing for state and commands. Tools call only commands documented by ONCHART's parser; there is no shell command or filesystem browsing endpoint.
 
-The client backs off after connection loss, pauses polling in the background and does not replay a button press when reconnecting. Duplicate command identifiers are handled once by the server. Clock interpolation is bounded to fresh samples and stops when the desktop clock is not advancing. Sliders submit on release; static screens do not run a permanent animation loop.
+The client backs off after connection loss, pauses polling in the background and does not replay a button press when reconnecting. Duplicate command identifiers are handled once by the server. Clock interpolation is bounded to fresh samples and stops when the desktop clock is not advancing. Sliders submit on release; static screens do not run a permanent animation loop. File-taking tools use their documented ONCHART command and path arguments, so paths must be supplied on the phone; native Windows file dialogs and simfile difficulty dialogs still require desktop interaction.
 
 ## Build and verification
 
 The private mobile project is in `mobile-remote`. Use Node 22.12+ (the validated build environment uses Node 24), `npm ci`, `npm run build`, and `npm test`. Its generated `remote.qrc` embeds compiled assets in the desktop application; it is not a development source distribution. Android builds use the workspace-local JDK/SDK and `mobile-remote/Build-Android.ps1`; signing material stays under the excluded `.tools/mobile/signing` directory and is never a public asset.
 
-The native protocol/integration tests are `onchart_remote_tests`; browser end-to-end tests use an isolated desktop fixture and Chromium/WebKit phone-sized viewports. Release-specific results and limitations belong in `RELEASE_3.21.2.md` and the complete generated changelog. Third-party notices ship with the mobile assets and desktop documentation.
+The native protocol/integration tests are `onchart_remote_tests`; browser end-to-end tests use an isolated desktop fixture and Chromium/WebKit phone-sized viewports. Release-specific results and limitations belong in `RELEASE_3.22.3.md` and the complete generated changelog. Third-party notices ship with the mobile assets and desktop documentation.
