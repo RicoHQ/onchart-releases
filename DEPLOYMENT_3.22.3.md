@@ -32,11 +32,15 @@ Earlier archives and the rejected mixed candidate remain preserved privately.
 
 The website repository's five launcher links target the dedicated setup asset.
 Its updated source commit a5f477afebb633c750257bd469799dbdd12967fd passed
-Cloudflare's Workers Builds: onchart check. The live site URL/buttons have not
-yet been verified; source/deployment success is not a live-button test.
+Cloudflare's Workers Builds: onchart check. The live site at
+https://onchart.ricohq.workers.dev/ was verified in the browser: all five download
+buttons target launcher-v3.22.3/ONCHART.Setup.exe. The target returned HTTP 200,
+571392 bytes, with the exact published launcher SHA-256
+`e1accde565c864869ed3c908c9b7afdaeee4768e5900133a262ea02b3fb5664b`.
 
 Limits: optional native live-integration checks remain skipped where fixtures
 were absent. No physical-phone, USB, native-iOS, real microphone latency/false
 activation or live-game crash-freedom result is claimed. Instant wake activation
 is not guaranteed, and full guided mobile parity remains planned. Runtime ZIPs
 remain byte-for-byte unchanged; this report supplements their assembly-time docs.
+
