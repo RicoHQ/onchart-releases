@@ -2,10 +2,13 @@
 
 [Download the current V2/V3 launcher](https://github.com/RicoHQ/onchart-releases/releases/download/launcher-v3.22.3/ONCHART.Setup.exe). V2 Classic 2.7.12 is available from the same installer.
 
-This catalog links all 60 preserved native versions plus releases 3.20.0 through 3.21.2. Each release has its changes, historical validation and package checksum.
+This catalog links preserved native versions and the current app releases. Each runtime release records its changes, validation limits and package checksum.
 
 | Version | Changes | Runtime archive |
 |---|---|---|
+| [3.22.3](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.3) | Published desktop app, faster wake/phone voice, reader/layout reliability; signed update/install/rollback verified | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.3/ONCHART_v3.22.3-portable.zip) |
+| [3.22.2 preview](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.2) | Faster wake handoff and phone push-to-talk preview; historical validation limits retained | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.2/ONCHART_v3.22.2-portable.zip) |
+| [3.22.0](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.0) | Historical mobile-remote release record | No runtime asset on this tag; use 3.22.3 |
 | [3.21.2](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.2) | Blue default remote theme and app icons | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.2/ONCHART_v3.21.2-portable.zip) |
 | [3.21.1](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.1) | Android/iPhone remote, paired preview controls and practice loops | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.1/ONCHART_v3.21.1-portable.zip) |
 | [3.21.0](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.0) | Selectable mods, live map readers, music pulses and installation folders | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.0/ONCHART_v3.21.0-portable.zip) |
