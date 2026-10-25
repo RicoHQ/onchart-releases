@@ -2,16 +2,16 @@
 
 [**Download ONCHART Launcher**](https://github.com/RicoHQ/onchart-releases/releases/download/launcher-v3.22.3/ONCHART.Setup.exe)
 
-Run ONCHART.Setup.exe, choose **V2 Classic (2.7.12)** or **V3 Native (3.22.3)**, then install. Use **Installation folder → Change folder** to select another dedicated folder; existing versions and rollback history are copied and verified, and the old folder is kept as a backup. The launcher remembers your selection. Each family keeps its own installation, automatic update preference and previous version for rollback. V3 requires an active licensed account.
+Run ONCHART.Setup.exe, choose **V2 Classic (2.7.12)** or **V3 Native (3.22.5)**, then install. Use **Installation folder → Change folder** to select another dedicated folder; existing versions and rollback history are copied and verified, and the old folder is kept as a backup. The launcher remembers your selection. Each family keeps its own installation, automatic update preference and previous version for rollback. V3 requires an active licensed account.
 
-For the preserved 3.21.2 offline bundle, [download the complete installer ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.2/ONCHART_v3.21.2-installer.zip), extract the whole folder, and run ONCHART Setup.exe. Both families are bundled; its V3 seed is 3.21.2 and online updates advance it to 3.22.3. For the latest V3 without a network connection, use the full V3 portable package below. No separate Python or Qt installation is required.
+For the preserved 3.21.2 offline bundle, [download the complete installer ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.2/ONCHART_v3.21.2-installer.zip), extract the whole folder, and run ONCHART Setup.exe. Both families are bundled; its V3 seed is 3.21.2 and online updates advance it to 3.22.5. For the latest V3 without a network connection, use the full V3 portable package below. No separate Python or Qt installation is required.
 
-The installer includes the [complete changelog](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.3/CHANGELOG.html), searchable before installation. Updates are checked when the launcher opens and verified using the pinned release signature, SHA-256 and size. Close ONCHART before updating. Rollback turns automatic updates off until you enable them again.
+The installer includes the [complete changelog](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.5/CHANGELOG.html), searchable before installation. Updates are checked when the launcher opens and verified using the pinned release signature, SHA-256 and size. Close ONCHART before updating. Rollback turns automatic updates off until you enable them again.
 
 - [Complete C++ version catalog](HISTORY.md)
 - [All releases and version-specific changes](https://github.com/RicoHQ/onchart-releases/releases)
 - [V2 portable package](https://github.com/RicoHQ/onchart-releases/releases/download/v2.7.12/ONCHART_v2.7.12-portable.zip)
-- [V3 portable package](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.3/ONCHART_v3.22.3-portable.zip)
+- [V3 portable package](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.5/ONCHART_v3.22.5-portable.zip)
 
 Historical packages retain their original bytes and curated version labels. Older binaries may show their pre-renumbering version text. Each historical release records its changes, original validation limitations and checksum; archive publication does not establish its original publication date or certify live game compatibility.
 
@@ -21,6 +21,6 @@ This public repository contains compiled downloads, release notes and signed upd
 
 ## Phone remote
 
-ONCHART 3.22.3 includes a paired local remote. [Download the Android app](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.3/ONCHART.Remote.apk). On iPhone, use Safari and Add to Home Screen. Enable Settings → Phone remote in ONCHART, then connect using the PC address and pairing code. [Connection and cable guide](MOBILE_REMOTE.md). No extra testing app is needed. Native iOS signing and physical phone/cable tests have not been performed.
+ONCHART 3.22.5 includes a paired local remote with typed forms for 94 tools and recent desktop worker results. The Android app is Remote 1.1.2; it retains the original signing certificate. [Download the Android app](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.5/ONCHART.Remote.apk). On iPhone, use Safari and Add to Home Screen. Enable Settings → Phone remote in ONCHART, then connect using the PC address and pairing code. [Connection and cable guide](MOBILE_REMOTE.md). No extra testing app is needed. Native iOS signing and physical phone/cable tests have not been performed.
 
-The [ONCHART app 3.22.3 release](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.3) is published and offered by the signed V3 feed. All 16 native suites passed. The published launcher verified the public app signature, size and SHA-256, installed an isolated 3.21.2 → 3.22.3 update, reopened saved state and rolled back successfully. V2 remains 2.7.12. Physical phone, USB and live-game crash-freedom checks remain unverified; full guided mobile parity is still planned.
+The [ONCHART app 3.22.5 release](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.5) is published and offered by the signed V3 feed. All 17 native suites, 27 mobile core checks and five Chromium/WebKit layout regressions passed. The published launcher verified the public app signature, size and SHA-256, installed an isolated 3.21.2 → 3.22.5 update, reopened saved state and rolled back successfully. V2 remains 2.7.12. Physical phone, USB and live-game crash-freedom checks remain unverified; full guided mobile parity is still planned.
