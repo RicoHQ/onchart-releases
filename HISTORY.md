@@ -6,9 +6,11 @@ This catalog links preserved native versions and the current app releases. Each 
 
 | Version | Changes | Runtime archive |
 |---|---|---|
+| [3.22.6](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.6) | Approved phone file inputs and raw-preserving rate exports; public signed update/install/rollback verified, live-device/game limits documented | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.6/ONCHART_v3.22.6-portable.zip) |
+| [3.22.5](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.5) | Typed phone forms, validated capabilities and retained worker results; signed update/install/rollback verified | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.5/ONCHART_v3.22.5-portable.zip) |
 | [3.22.3](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.3) | Published desktop app, faster wake/phone voice, reader/layout reliability; signed update/install/rollback verified | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.3/ONCHART_v3.22.3-portable.zip) |
 | [3.22.2 preview](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.2) | Faster wake handoff and phone push-to-talk preview; historical validation limits retained | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.22.2/ONCHART_v3.22.2-portable.zip) |
-| [3.22.0](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.0) | Historical mobile-remote release record | No runtime asset on this tag; use 3.22.3 |
+| [3.22.0](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.22.0) | Historical mobile-remote release record | No runtime asset on this tag; use the current V3 release |
 | [3.21.2](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.2) | Blue default remote theme and app icons | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.2/ONCHART_v3.21.2-portable.zip) |
 | [3.21.1](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.1) | Android/iPhone remote, paired preview controls and practice loops | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.1/ONCHART_v3.21.1-portable.zip) |
 | [3.21.0](https://github.com/RicoHQ/onchart-releases/releases/tag/v3.21.0) | Selectable mods, live map readers, music pulses and installation folders | [Download ZIP](https://github.com/RicoHQ/onchart-releases/releases/download/v3.21.0/ONCHART_v3.21.0-portable.zip) |
