@@ -1,6 +1,6 @@
-# ONCHART Remote 1.1.3
+# ONCHART Remote 1.1.5
 
-The default interface and app icons use ONCHART's blue accent (#38bdf8) with navy backgrounds. Choose another accent in **More → Remote theme**; it saves on that phone. Desktop 3.22.6 includes this interface; the signed Android app is version 1.1.3.
+The default interface and app icons use ONCHART's blue accent (#38bdf8) with navy backgrounds. Choose another accent in **More → Remote theme**; it saves on that phone. Desktop 3.22.8 includes this interface; the signed Android app is version 1.1.5.
 
 Update the Android app to receive the new icon. For an existing iPhone home-screen shortcut that retains the old icon, remove and re-add the shortcut from Safari after updating ONCHART on the PC.
 
@@ -45,18 +45,22 @@ The same pairing and controls apply to every route. Physical phones, cables, dri
 
 The remote is off at every desktop start. Pairing codes expire after three minutes. Up to four phones can pair; **Disconnect all phones**, turning the remote off or signing out revokes them. Session tokens are kept hashed in desktop memory, and the phone retains its token only for its current app/browser session. Idle sessions expire after twelve hours.
 
-Use a trusted local network. The connection is local HTTP, so it does not encrypt traffic against other devices monitoring that network. Do not expose or port-forward the remote to the internet. The server limits private IPv4 peers, validates host/origin headers, and requires pairing for state and commands. Tools call only commands documented by ONCHART's parser; there is no shell command or filesystem browsing endpoint.
+Use a trusted local network. The connection is local HTTP, so it does not encrypt traffic against other devices monitoring that network. Do not expose or port-forward the remote to the internet. The server limits private IPv4 peers, validates host/origin headers, and requires pairing for state and commands. Tools call only commands documented by ONCHART's parser; there is no shell endpoint; approved-input browsing uses opaque IDs and declared file/folder policies.
 
-The client backs off after connection loss, pauses polling in the background and does not replay a button press when reconnecting. Duplicate command identifiers are handled once by the server. Clock interpolation is bounded to fresh samples and stops when the desktop clock is not advancing. Sliders submit on release; static screens do not run a permanent animation loop. File-taking tools use their documented ONCHART command and path arguments, so paths must be supplied on the phone; native Windows file dialogs and simfile difficulty dialogs still require desktop interaction.
+The client backs off after connection loss, pauses polling in the background and does not replay a button press when reconnecting. Duplicate command identifiers are handled once by the server. Clock interpolation is bounded to fresh samples and stops when the desktop clock is not advancing. Sliders submit on release; static screens do not run a permanent animation loop. Supported file/folder fields offer approved PC input choices. Remaining output flows and native Windows/simfile difficulty dialogs still need desktop interaction or documented advanced inputs.
 
-## Build and verification
+## Approved PC inputs and export destinations
 
-The private mobile project is in `mobile-remote`. Use Node 22.12+ (the validated build environment uses Node 24), `npm ci`, `npm run build`, and `npm test`. Its generated `remote.qrc` embeds compiled assets in the desktop application; it is not a development source distribution. Android builds use the workspace-local JDK/SDK and `mobile-remote/Build-Android.ps1`; signing material stays under the excluded `.tools/mobile/signing` directory and is never a public asset.
+In **Settings → Phone remote** on the PC, approve the required read or write access. The phone can choose files for 13 declared existing-file inputs, and existing folders for Session index, Preview skin and Extension link. Review the choice before running an action. Approvals are session-wide for paired phones and can be revoked on the PC.
 
-The native protocol/integration tests are `onchart_remote_tests`; browser end-to-end tests use an isolated desktop fixture and Chromium/WebKit phone-sized viewports. Release-specific results and limitations belong in `RELEASE_3.22.3.md` and the complete generated changelog. Third-party notices ship with the mobile assets and desktop documentation.
+Rate, BPM and Bulk Rate can save to an explicitly Write-approved folder. Review the chart and options, then create copies; each run uses a fresh export subfolder and keeps existing files. Read approval does not authorize export. Bulk dry run requires no chart or destination and creates no files or folders; switching back retains the local folder draft and requires a new review.
 
-## Approved PC files in 3.22.6
+Other conversion/pack/archive/marathon/session/skin/notebook destinations and complete phone workflow parity remain unfinished. Raw commands, assistant actions, indirect resources and file-replacement races are not yet covered by a global path boundary. The picker does not restrict every existing desktop tool.
 
-Approve a read-only folder in Settings → Phone remote on the PC. The phone can browse it and choose files for 13 supported existing-file inputs, review the filename and explicitly run the action. Approval covers paired phones for the current session and can be revoked on the PC. Directory/output selection and global command/assistant/indirect-resource path permissions remain unfinished; this picker does not restrict every existing desktop tool.
+## Validation
 
-The release passed 20 native suites (19 optional skips), 40 phone-core checks and 30 browser checks across six profiles. Selected map-open is the end-to-end reference. Physical Android/iPhone, USB and live microphone/game tests remain unverified. Safari/home-screen remains the iPhone delivery route; separate native iOS packaging is outside the current roadmap.
+Remote 1.1.5/build 8 retains the original Android certificate, compiled app identity and exact browser-tested assets, with no source maps. Desktop 3.22.8 passed all 20 native suites (19 optional skips), phone core 51/51 and a clean 15-case browser run: five Bulk Rate scenarios across small portrait, landscape and iPhone WebKit. Actual chart/audio exports, invalid inputs, revoked/stale selections and no-chart dry runs were checked.
+
+The Windows package passed standalone startup, shipped-library, offline speech/silence and archive integrity checks. The production launcher verified its public signed download, isolated upgrade from 3.22.6, saved state and rollback; the exact stable V3 feed and database envelope were verified. V2 remains 2.7.12.
+
+Physical Android/iPhone, USB and live microphone/game tests remain unverified. Live microphone testing was deferred by the user; no instant activation, broad false-activation result or confirmed osu crash repair is claimed. Safari/home-screen remains the iPhone delivery route; separate native iOS packaging is outside the current roadmap. Development source, signing keys and release automation remain private.
